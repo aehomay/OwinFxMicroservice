@@ -36,6 +36,7 @@ namespace OwinFxMicroservice
 				Console.WriteLine(response.Content.ReadAsStringAsync().Result);
 				#endregion
 
+				Console.WriteLine("Press any key to exit or call Postman for more tests.");
 				Console.ReadLine();
 			}
 		}
