@@ -16,7 +16,7 @@ namespace OwinFxMicroservice
 			using (WebApp.Start<Startup>(url: baseAddress))
 			{
 				// Create HttpCient and make a request to api/values 
-				HttpClient client = new HttpClient();
+				var client = new HttpClient();
 
 				#region GET
 				Console.WriteLine("///////////////////////// GET HAS BEEN SENT ///////////////////////////////////////");
@@ -25,7 +25,7 @@ namespace OwinFxMicroservice
 				Console.WriteLine(response.Content.ReadAsStringAsync().Result);
 				#endregion
 
-				Console.WriteLine("Press any key to continue with the POST message.");
+				Console.WriteLine("Press any key to continue with the POST message or call Postman for more tests..");
 				Console.ReadLine();
 
 				#region POST
