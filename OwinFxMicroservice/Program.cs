@@ -30,7 +30,7 @@ namespace OwinFxMicroservice
 
 				#region POST
 				Console.WriteLine("///////////////////////// POST HAS BEEN SENT ///////////////////////////////////");
-				var stringContent = new StringContent(JsonConvert.SerializeObject("New World"), Encoding.UTF8, "application/json");
+				var stringContent = new StringContent(JsonConvert.SerializeObject("Hello World"), Encoding.UTF8, "application/json");
 				response = client.PostAsync(new Uri(baseAddress + "api/values"), stringContent).Result;
 				Console.WriteLine(response);
 				Console.WriteLine(response.Content.ReadAsStringAsync().Result);
